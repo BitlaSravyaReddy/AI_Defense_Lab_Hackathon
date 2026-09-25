@@ -1,0 +1,63 @@
+# ==============================================================================
+# Unified Platform — .gitignore
+# ==============================================================================
+
+# Secrets & Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+.output/
+.nitro/
+.vinxi/
+.tanstack/
+.vite/
+*.local
+.wrangler/
+.dev.vars
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Promptfoo & Evaluations Cache
+.promptfoo/
+promptfoo-output/
+cache/
+cache.json
+
+# Local Databases & Logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+
+# IDE / System
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*~
+.deepteam/
+.deepeval/
