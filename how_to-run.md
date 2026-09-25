@@ -172,15 +172,7 @@ Once loaded, use the top navigation bar to access the unified workflows:
 ### 1. **Overview Dashboard (`/`)**
 - High-level system overview showing total registered agents, active deployments, security health status, and live evaluation stats.
 
-### 2. **Unified Agent Registration (`/register`)**
-- Register any Git repository containing agent code and launch automated evaluation in a single step:
-  - **Repository Details**: Enter GitHub Repo URL (e.g. `https://github.com/my-org/my-agent`) and Branch (`main`).
-  - **Agent Profile**: Set agent name, architecture type (`RAG`, `Agentic`, `Fine-tuned`, `Hybrid`), domain, sensitivity, and deployment jurisdictions.
-  - **Target Endpoint**: URL where the agent is hosted for live adversarial probing.
-  - **Submit**: Triggers `arctl` package build, registers the agent in the registry database, schedules periodic audits, and triggers an immediate evaluation session.
-  - **Direct Access to Results**: Upon completion, a **"View Red Team Results →"** button appears directly on the success banner.
-
-### 3. **Fleet Dashboard (`/fleet`)**
+### 2. **Fleet Dashboard (`/fleet`)**
 - Centralized fleet view of all registered agents:
   - Shows agent status (`Active` / `Paused`), last evaluated timestamp, schedule interval, and latest composite confidence score.
   - **"Re-run"**: Triggers an on-demand re-evaluation of that agent.
@@ -241,4 +233,4 @@ Expected output:
   *(Remember to update CORS settings if changing the default frontend port)*.
 
 ### Database Connection Issues
-- Ensure your `DATABASE_URL` in `unified_platform/backend/.env` is accessible. The system automatically handles connection pooling and reconnects on demand.
+- Ensure your `DATABASE_URL` in `backend/.env` is accessible. The system automatically handles connection pooling and reconnects on demand.
